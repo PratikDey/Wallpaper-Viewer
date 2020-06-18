@@ -10,7 +10,7 @@ function App() {
       );
       const response = await res.json();
       let newArr = [];
-      response.data.children.map((item) => {
+      response.data.children.forEach((item) => {
         try {
           const image = item.data.preview.images[0].resolutions[3].url;
           newArr.push({
